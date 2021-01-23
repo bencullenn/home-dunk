@@ -20,6 +20,7 @@
 		0CE71E9325BCDC0F002D1F4A /* BTDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE71E8F25BCDC0F002D1F4A /* BTDevice.swift */; };
 		0CE71E9425BCDC0F002D1F4A /* BTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE71E9025BCDC0F002D1F4A /* BTManager.swift */; };
 		0CE71E9525BCDC0F002D1F4A /* BTUUIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE71E9125BCDC0F002D1F4A /* BTUUIDs.swift */; };
+		0CE71E9B25BCDC77002D1F4A /* HoopBotManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE71E9A25BCDC77002D1F4A /* HoopBotManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		0CE71E8F25BCDC0F002D1F4A /* BTDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTDevice.swift; sourceTree = "<group>"; };
 		0CE71E9025BCDC0F002D1F4A /* BTManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTManager.swift; sourceTree = "<group>"; };
 		0CE71E9125BCDC0F002D1F4A /* BTUUIDs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTUUIDs.swift; sourceTree = "<group>"; };
+		0CE71E9A25BCDC77002D1F4A /* HoopBotManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoopBotManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				0CE71E2C25B8008E002D1F4A /* AppDelegate.swift */,
 				0CE71E2E25B8008E002D1F4A /* SceneDelegate.swift */,
 				0CE71E3025B8008E002D1F4A /* ViewController.swift */,
+				0CE71E9A25BCDC77002D1F4A /* HoopBotManager.swift */,
 				0CE71E3225B8008E002D1F4A /* Main.storyboard */,
 				0CE71E3825B8008F002D1F4A /* Assets.xcassets */,
 				0CE71E3A25B8008F002D1F4A /* LaunchScreen.storyboard */,
@@ -281,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CE71E9B25BCDC77002D1F4A /* HoopBotManager.swift in Sources */,
 				0CE71E9525BCDC0F002D1F4A /* BTUUIDs.swift in Sources */,
 				0CE71E9425BCDC0F002D1F4A /* BTManager.swift in Sources */,
 				0CE71E3725B8008E002D1F4A /* Home_Dunk.xcdatamodeld in Sources */,
