@@ -16,6 +16,10 @@
 		0CE71E3C25B8008F002D1F4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE71E3A25B8008F002D1F4A /* LaunchScreen.storyboard */; };
 		0CE71E4725B8008F002D1F4A /* Home_DunkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE71E4625B8008F002D1F4A /* Home_DunkTests.swift */; };
 		0CE71E5225B8008F002D1F4A /* Home_DunkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE71E5125B8008F002D1F4A /* Home_DunkUITests.swift */; };
+		0CE71E9225BCDC0F002D1F4A /* BTUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE71E8E25BCDC0F002D1F4A /* BTUtils.swift */; };
+		0CE71E9325BCDC0F002D1F4A /* BTDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE71E8F25BCDC0F002D1F4A /* BTDevice.swift */; };
+		0CE71E9425BCDC0F002D1F4A /* BTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE71E9025BCDC0F002D1F4A /* BTManager.swift */; };
+		0CE71E9525BCDC0F002D1F4A /* BTUUIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE71E9125BCDC0F002D1F4A /* BTUUIDs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		0CE71E4D25B8008F002D1F4A /* Home-DunkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Home-DunkUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CE71E5125B8008F002D1F4A /* Home_DunkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_DunkUITests.swift; sourceTree = "<group>"; };
 		0CE71E5325B8008F002D1F4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CE71E8E25BCDC0F002D1F4A /* BTUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTUtils.swift; sourceTree = "<group>"; };
+		0CE71E8F25BCDC0F002D1F4A /* BTDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTDevice.swift; sourceTree = "<group>"; };
+		0CE71E9025BCDC0F002D1F4A /* BTManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTManager.swift; sourceTree = "<group>"; };
+		0CE71E9125BCDC0F002D1F4A /* BTUUIDs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTUUIDs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,7 @@
 				0CE71E3A25B8008F002D1F4A /* LaunchScreen.storyboard */,
 				0CE71E3D25B8008F002D1F4A /* Info.plist */,
 				0CE71E3525B8008E002D1F4A /* Home_Dunk.xcdatamodeld */,
+				0CE71E9925BCDC16002D1F4A /* Bluetooth */,
 			);
 			path = "Home-Dunk";
 			sourceTree = "<group>";
@@ -129,6 +138,17 @@
 				0CE71E5325B8008F002D1F4A /* Info.plist */,
 			);
 			path = "Home-DunkUITests";
+			sourceTree = "<group>";
+		};
+		0CE71E9925BCDC16002D1F4A /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				0CE71E9125BCDC0F002D1F4A /* BTUUIDs.swift */,
+				0CE71E8E25BCDC0F002D1F4A /* BTUtils.swift */,
+				0CE71E9025BCDC0F002D1F4A /* BTManager.swift */,
+				0CE71E8F25BCDC0F002D1F4A /* BTDevice.swift */,
+			);
+			path = Bluetooth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,7 +281,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CE71E9525BCDC0F002D1F4A /* BTUUIDs.swift in Sources */,
+				0CE71E9425BCDC0F002D1F4A /* BTManager.swift in Sources */,
 				0CE71E3725B8008E002D1F4A /* Home_Dunk.xcdatamodeld in Sources */,
+				0CE71E9325BCDC0F002D1F4A /* BTDevice.swift in Sources */,
+				0CE71E9225BCDC0F002D1F4A /* BTUtils.swift in Sources */,
 				0CE71E3125B8008E002D1F4A /* ViewController.swift in Sources */,
 				0CE71E2D25B8008E002D1F4A /* AppDelegate.swift in Sources */,
 				0CE71E2F25B8008E002D1F4A /* SceneDelegate.swift in Sources */,
