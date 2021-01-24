@@ -50,7 +50,7 @@
 		0CE6707725BCEE2D00E5FD10 /* FriendSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSelectViewController.swift; sourceTree = "<group>"; };
 		0CE6707C25BCF02000E5FD10 /* LiveGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveGameViewController.swift; sourceTree = "<group>"; };
 		0CE6708125BD067600E5FD10 /* LBGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBGameViewController.swift; sourceTree = "<group>"; };
-		0CE71E2925B8008E002D1F4A /* Home-Dunk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Home-Dunk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CE71E2925B8008E002D1F4A /* Home Dunk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Home Dunk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CE71E2C25B8008E002D1F4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CE71E2E25B8008E002D1F4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0CE71E3325B8008E002D1F4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,10 +58,10 @@
 		0CE71E3825B8008F002D1F4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CE71E3B25B8008F002D1F4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CE71E3D25B8008F002D1F4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0CE71E4225B8008F002D1F4A /* Home-DunkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Home-DunkTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CE71E4225B8008F002D1F4A /* Home DunkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Home DunkTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CE71E4625B8008F002D1F4A /* Home_DunkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_DunkTests.swift; sourceTree = "<group>"; };
 		0CE71E4825B8008F002D1F4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0CE71E4D25B8008F002D1F4A /* Home-DunkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Home-DunkUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CE71E4D25B8008F002D1F4A /* Home DunkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Home DunkUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CE71E5125B8008F002D1F4A /* Home_DunkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_DunkUITests.swift; sourceTree = "<group>"; };
 		0CE71E5325B8008F002D1F4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CE71E8E25BCDC0F002D1F4A /* BTUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTUtils.swift; sourceTree = "<group>"; };
@@ -109,9 +109,9 @@
 		0CE71E2A25B8008E002D1F4A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0CE71E2925B8008E002D1F4A /* Home-Dunk.app */,
-				0CE71E4225B8008F002D1F4A /* Home-DunkTests.xctest */,
-				0CE71E4D25B8008F002D1F4A /* Home-DunkUITests.xctest */,
+				0CE71E2925B8008E002D1F4A /* Home Dunk.app */,
+				0CE71E4225B8008F002D1F4A /* Home DunkTests.xctest */,
+				0CE71E4D25B8008F002D1F4A /* Home DunkUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,9 +169,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0CE71E2825B8008E002D1F4A /* Home-Dunk */ = {
+		0CE71E2825B8008E002D1F4A /* Home Dunk */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0CE71E5625B8008F002D1F4A /* Build configuration list for PBXNativeTarget "Home-Dunk" */;
+			buildConfigurationList = 0CE71E5625B8008F002D1F4A /* Build configuration list for PBXNativeTarget "Home Dunk" */;
 			buildPhases = (
 				0CE71E2525B8008E002D1F4A /* Sources */,
 				0CE71E2625B8008E002D1F4A /* Frameworks */,
@@ -181,14 +181,14 @@
 			);
 			dependencies = (
 			);
-			name = "Home-Dunk";
+			name = "Home Dunk";
 			productName = "Home-Dunk";
-			productReference = 0CE71E2925B8008E002D1F4A /* Home-Dunk.app */;
+			productReference = 0CE71E2925B8008E002D1F4A /* Home Dunk.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0CE71E4125B8008F002D1F4A /* Home-DunkTests */ = {
+		0CE71E4125B8008F002D1F4A /* Home DunkTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0CE71E5925B8008F002D1F4A /* Build configuration list for PBXNativeTarget "Home-DunkTests" */;
+			buildConfigurationList = 0CE71E5925B8008F002D1F4A /* Build configuration list for PBXNativeTarget "Home DunkTests" */;
 			buildPhases = (
 				0CE71E3E25B8008F002D1F4A /* Sources */,
 				0CE71E3F25B8008F002D1F4A /* Frameworks */,
@@ -199,14 +199,14 @@
 			dependencies = (
 				0CE71E4425B8008F002D1F4A /* PBXTargetDependency */,
 			);
-			name = "Home-DunkTests";
+			name = "Home DunkTests";
 			productName = "Home-DunkTests";
-			productReference = 0CE71E4225B8008F002D1F4A /* Home-DunkTests.xctest */;
+			productReference = 0CE71E4225B8008F002D1F4A /* Home DunkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0CE71E4C25B8008F002D1F4A /* Home-DunkUITests */ = {
+		0CE71E4C25B8008F002D1F4A /* Home DunkUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0CE71E5C25B8008F002D1F4A /* Build configuration list for PBXNativeTarget "Home-DunkUITests" */;
+			buildConfigurationList = 0CE71E5C25B8008F002D1F4A /* Build configuration list for PBXNativeTarget "Home DunkUITests" */;
 			buildPhases = (
 				0CE71E4925B8008F002D1F4A /* Sources */,
 				0CE71E4A25B8008F002D1F4A /* Frameworks */,
@@ -217,9 +217,9 @@
 			dependencies = (
 				0CE71E4F25B8008F002D1F4A /* PBXTargetDependency */,
 			);
-			name = "Home-DunkUITests";
+			name = "Home DunkUITests";
 			productName = "Home-DunkUITests";
-			productReference = 0CE71E4D25B8008F002D1F4A /* Home-DunkUITests.xctest */;
+			productReference = 0CE71E4D25B8008F002D1F4A /* Home DunkUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -244,7 +244,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0CE71E2425B8008E002D1F4A /* Build configuration list for PBXProject "Home-Dunk" */;
+			buildConfigurationList = 0CE71E2425B8008E002D1F4A /* Build configuration list for PBXProject "Home Dunk" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -257,9 +257,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0CE71E2825B8008E002D1F4A /* Home-Dunk */,
-				0CE71E4125B8008F002D1F4A /* Home-DunkTests */,
-				0CE71E4C25B8008F002D1F4A /* Home-DunkUITests */,
+				0CE71E2825B8008E002D1F4A /* Home Dunk */,
+				0CE71E4125B8008F002D1F4A /* Home DunkTests */,
+				0CE71E4C25B8008F002D1F4A /* Home DunkUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -333,12 +333,12 @@
 /* Begin PBXTargetDependency section */
 		0CE71E4425B8008F002D1F4A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0CE71E2825B8008E002D1F4A /* Home-Dunk */;
+			target = 0CE71E2825B8008E002D1F4A /* Home Dunk */;
 			targetProxy = 0CE71E4325B8008F002D1F4A /* PBXContainerItemProxy */;
 		};
 		0CE71E4F25B8008F002D1F4A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0CE71E2825B8008E002D1F4A /* Home-Dunk */;
+			target = 0CE71E2825B8008E002D1F4A /* Home Dunk */;
 			targetProxy = 0CE71E4E25B8008F002D1F4A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -535,7 +535,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Home-Dunk.app/Home-Dunk";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Home Dunk.app/Home Dunk";
 			};
 			name = Debug;
 		};
@@ -557,7 +557,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Home-Dunk.app/Home-Dunk";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Home Dunk.app/Home Dunk";
 			};
 			name = Release;
 		};
@@ -604,7 +604,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0CE71E2425B8008E002D1F4A /* Build configuration list for PBXProject "Home-Dunk" */ = {
+		0CE71E2425B8008E002D1F4A /* Build configuration list for PBXProject "Home Dunk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CE71E5425B8008F002D1F4A /* Debug */,
@@ -613,7 +613,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0CE71E5625B8008F002D1F4A /* Build configuration list for PBXNativeTarget "Home-Dunk" */ = {
+		0CE71E5625B8008F002D1F4A /* Build configuration list for PBXNativeTarget "Home Dunk" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CE71E5725B8008F002D1F4A /* Debug */,
@@ -622,7 +622,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0CE71E5925B8008F002D1F4A /* Build configuration list for PBXNativeTarget "Home-DunkTests" */ = {
+		0CE71E5925B8008F002D1F4A /* Build configuration list for PBXNativeTarget "Home DunkTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CE71E5A25B8008F002D1F4A /* Debug */,
@@ -631,7 +631,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0CE71E5C25B8008F002D1F4A /* Build configuration list for PBXNativeTarget "Home-DunkUITests" */ = {
+		0CE71E5C25B8008F002D1F4A /* Build configuration list for PBXNativeTarget "Home DunkUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CE71E5D25B8008F002D1F4A /* Debug */,
