@@ -38,7 +38,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="Play Live Game"/>
                                 <connections>
-                                    <segue destination="kDI-rX-dSV" kind="show" id="ajX-Ze-pH4"/>
+                                    <segue destination="Qtt-KD-D3q" kind="show" id="TuY-eu-WKT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLG-gI-4pg">
@@ -264,54 +264,38 @@
             <point key="canvasLocation" x="169.56521739130437" y="799.55357142857144"/>
         </scene>
         <!--Friend Select-->
-        <scene sceneID="4Hy-g6-Qvf">
+        <scene sceneID="0xE-aI-n08">
             <objects>
-                <viewController title="Friend Select" id="kDI-rX-dSV" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9T8-Ty-AdM">
+                <tableViewController id="Qtt-KD-D3q" customClass="FriendSelectViewController" customModule="Home_Dunk" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="USs-LU-gU9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="euk-Eg-8uq">
-                                <rect key="frame" x="0.0" y="88" width="414" height="790"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="vcA-7n-Zh7" style="IBUITableViewCellStyleDefault" id="JWH-qN-em1">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JWH-qN-em1" id="MhN-J2-ihS">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Play Jimmy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vcA-7n-Zh7">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="4s4-xe-g3m" kind="show" id="zy0-rt-379"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="1z8-JM-Bek"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Friend Select" id="MHz-56-phm"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sjd-Fk-wGi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendCell" id="W0c-ad-jhr">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W0c-ad-jhr" id="U31-zj-J2f">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Qtt-KD-D3q" id="6gI-l8-Sww"/>
+                            <outlet property="delegate" destination="Qtt-KD-D3q" id="iqb-HO-eYI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Friend Select" id="Gy4-8X-CHp"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6GZ-pW-3Bj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1279.7101449275362" y="-410.49107142857139"/>
+            <point key="canvasLocation" x="1280" y="-415"/>
         </scene>
-        <!--Friend Game-->
+        <!--Live Game-->
         <scene sceneID="9pj-Bi-qlZ">
             <objects>
-                <viewController title="Friend Game" id="4s4-xe-g3m" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LiveGameVC" title="Live Game" id="4s4-xe-g3m" customClass="LiveGameViewController" customModule="Home_Dunk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OP6-Pc-FlF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -344,8 +328,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tim's Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7S-eM-qFK">
-                                <rect key="frame" x="107" y="287" width="200" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jimmy's Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7S-eM-qFK">
+                                <rect key="frame" x="82" y="287" width="251" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
@@ -389,7 +373,7 @@
                         <viewLayoutGuide key="safeArea" id="cDW-hY-MbQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Friend Game" id="HyY-ta-7Yh"/>
+                    <navigationItem key="navigationItem" title="Live Game" id="HyY-ta-7Yh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="951-Nq-Gd0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
