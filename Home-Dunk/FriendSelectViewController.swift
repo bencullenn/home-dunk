@@ -10,7 +10,7 @@ import UIKit
 
 class FriendSelectViewController: UITableViewController {
 
-    private var friends: [String] = ["Jimmy"]
+    private var friends: [String] = ["Andre", "Austin", "Bradley", "Daniel", "Tim"]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

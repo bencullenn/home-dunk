@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>Enable Bluetooth permissions so you can connect to Hoop Bot</string>
+	<string>Enable Bluetooth permissions so you can connect to your Hoop Bot</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

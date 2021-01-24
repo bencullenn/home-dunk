@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert]) { (success, error) in
             
         }
-        print(hoopBot)
+        print("\(String(describing: hoopBot)) was created")
         return true
     }
 
