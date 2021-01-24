@@ -72,7 +72,7 @@
         <!--Leaderboard Game-->
         <scene sceneID="BQQ-WK-mWY">
             <objects>
-                <viewController title="Leaderboard Game" id="13J-hh-hxu" sceneMemberID="viewController">
+                <viewController title="Leaderboard Game" id="13J-hh-hxu" customClass="LBGameViewController" customModule="Home_Dunk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="16X-Qs-OlP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,6 +138,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Start Game"/>
+                                <connections>
+                                    <action selector="startGame:" destination="13J-hh-hxu" eventType="touchUpInside" id="eEi-T2-0l7"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUu-fE-9L1">
                                 <rect key="frame" x="191" y="574" width="95" height="35"/>
@@ -151,6 +154,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Leaderboard Game" id="KQe-8u-oqD"/>
+                    <connections>
+                        <outlet property="currentScoreLabel" destination="CrK-me-5sH" id="rhB-bX-zIr"/>
+                        <outlet property="highScoreLabel" destination="kbg-9I-ypF" id="wd7-5N-Ore"/>
+                        <outlet property="startButtonLabel" destination="xqR-mL-RmI" id="fQZ-85-xsa"/>
+                        <outlet property="timerLabel" destination="vgE-jd-rfo" id="HXK-PD-RHb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilO-qz-c1Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

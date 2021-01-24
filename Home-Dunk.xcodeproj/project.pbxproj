@@ -11,9 +11,9 @@
 		0CE6707325BCE5D700E5FD10 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6707225BCE5D700E5FD10 /* DebugViewController.swift */; };
 		0CE6707825BCEE2D00E5FD10 /* FriendSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6707725BCEE2D00E5FD10 /* FriendSelectViewController.swift */; };
 		0CE6707D25BCF02000E5FD10 /* LiveGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6707C25BCF02000E5FD10 /* LiveGameViewController.swift */; };
+		0CE6708225BD067600E5FD10 /* LBGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6708125BD067600E5FD10 /* LBGameViewController.swift */; };
 		0CE71E2D25B8008E002D1F4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE71E2C25B8008E002D1F4A /* AppDelegate.swift */; };
 		0CE71E2F25B8008E002D1F4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE71E2E25B8008E002D1F4A /* SceneDelegate.swift */; };
-		0CE71E3125B8008E002D1F4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE71E3025B8008E002D1F4A /* ViewController.swift */; };
 		0CE71E3425B8008E002D1F4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE71E3225B8008E002D1F4A /* Main.storyboard */; };
 		0CE71E3725B8008E002D1F4A /* Home_Dunk.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0CE71E3525B8008E002D1F4A /* Home_Dunk.xcdatamodeld */; };
 		0CE71E3925B8008F002D1F4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CE71E3825B8008F002D1F4A /* Assets.xcassets */; };
@@ -49,10 +49,10 @@
 		0CE6707225BCE5D700E5FD10 /* DebugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
 		0CE6707725BCEE2D00E5FD10 /* FriendSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSelectViewController.swift; sourceTree = "<group>"; };
 		0CE6707C25BCF02000E5FD10 /* LiveGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveGameViewController.swift; sourceTree = "<group>"; };
+		0CE6708125BD067600E5FD10 /* LBGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBGameViewController.swift; sourceTree = "<group>"; };
 		0CE71E2925B8008E002D1F4A /* Home-Dunk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Home-Dunk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CE71E2C25B8008E002D1F4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CE71E2E25B8008E002D1F4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0CE71E3025B8008E002D1F4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0CE71E3325B8008E002D1F4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0CE71E3625B8008E002D1F4A /* Home_Dunk.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Home_Dunk.xcdatamodel; sourceTree = "<group>"; };
 		0CE71E3825B8008F002D1F4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,9 +121,9 @@
 			children = (
 				0CE71E2C25B8008E002D1F4A /* AppDelegate.swift */,
 				0CE71E2E25B8008E002D1F4A /* SceneDelegate.swift */,
-				0CE71E3025B8008E002D1F4A /* ViewController.swift */,
 				0CE71E9A25BCDC77002D1F4A /* HoopBotManager.swift */,
 				0CE71E3225B8008E002D1F4A /* Main.storyboard */,
+				0CE6708125BD067600E5FD10 /* LBGameViewController.swift */,
 				0CE6707C25BCF02000E5FD10 /* LiveGameViewController.swift */,
 				0CE6707725BCEE2D00E5FD10 /* FriendSelectViewController.swift */,
 				0CE6707225BCE5D700E5FD10 /* DebugViewController.swift */,
@@ -306,7 +306,7 @@
 				0CE6706E25BCE57000E5FD10 /* GameModeViewController.swift in Sources */,
 				0CE71E9225BCDC0F002D1F4A /* BTUtils.swift in Sources */,
 				0CE6707825BCEE2D00E5FD10 /* FriendSelectViewController.swift in Sources */,
-				0CE71E3125B8008E002D1F4A /* ViewController.swift in Sources */,
+				0CE6708225BD067600E5FD10 /* LBGameViewController.swift in Sources */,
 				0CE71E2D25B8008E002D1F4A /* AppDelegate.swift in Sources */,
 				0CE71E2F25B8008E002D1F4A /* SceneDelegate.swift in Sources */,
 			);
