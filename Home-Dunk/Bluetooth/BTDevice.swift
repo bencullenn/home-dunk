@@ -42,7 +42,7 @@ class BTDevice: NSObject {
             
             _blink = newValue
             if let char = blinkChar {
-                peripheral.writeValue(Data(bytes: [_blink ? 1 : 0]), for: char, type: .withResponse)
+                peripheral.writeValue(Data(_: [_blink ? 1 : 0]), for: char, type: .withResponse)
             }
         }
     }
@@ -56,7 +56,7 @@ class BTDevice: NSObject {
             
             _speed = newValue
             if let char = speedChar {
-                peripheral.writeValue(Data(bytes: [UInt8(_speed)]), for: char, type: .withResponse)
+                peripheral.writeValue(Data(_: [UInt8(_speed)]), for: char, type: .withResponse)
             }
         }
     }
@@ -84,7 +84,7 @@ class BTDevice: NSObject {
             
             _score = newValue
             if let char = scoreChar {
-                peripheral.writeValue(Data(bytes: [UInt8(_score)]), for: char, type: .withResponse)
+                peripheral.writeValue(Data(_: [UInt8(_score)]), for: char, type: .withResponse)
             }
         }
     }
