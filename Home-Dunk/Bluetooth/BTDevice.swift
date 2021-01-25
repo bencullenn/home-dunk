@@ -25,8 +25,12 @@ class BTDevice: NSObject {
     private let manager: CBCentralManager
     private var blinkChar: CBCharacteristic?
     private var speedChar: CBCharacteristic?
+    private var activeGameChar: CBCharacteristic?
+    private var scoreChar: CBCharacteristic?
     private var _blink: Bool = false
     private var _speed: Int = 5
+    private var _activeGame: Bool = false
+    private var _score: Int = 0
     
     weak var delegate: BTDeviceDelegate?
     var blink: Bool {
@@ -42,6 +46,7 @@ class BTDevice: NSObject {
             }
         }
     }
+    
     var speed: Int {
         get {
             return _speed
@@ -55,6 +60,35 @@ class BTDevice: NSObject {
             }
         }
     }
+    
+    var activeGame: Bool {
+        get {
+            return _activeGame
+        }
+        set {
+            guard _activeGame != newValue else { return }
+            
+            _activeGame = newValue
+            if let char = activeGameChar {
+                peripheral.writeValue(Data(_: [_activeGame ? 1 : 0]), for: char, type: .withResponse)
+            }
+        }
+    }
+    
+    var score: Int {
+        get {
+            return _score
+        }
+        set {
+            guard _score != newValue else { return }
+            
+            _score = newValue
+            if let char = scoreChar {
+                peripheral.writeValue(Data(bytes: [UInt8(_score)]), for: char, type: .withResponse)
+            }
+        }
+    }
+    
     var name: String {
         return peripheral.name ?? "Unknown device"
     }

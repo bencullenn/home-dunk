@@ -46,6 +46,9 @@ class LiveGameViewController: UIViewController {
             //Resets timer label to length
             timerLabel.text = String(Int(timerLength))
             
+            //End game on robot
+            hoopBot?.endGame()
+            
             activeGame = false;
         } else {
             //If game is not actively running
@@ -56,6 +59,7 @@ class LiveGameViewController: UIViewController {
             //Starts timer on device
             timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: updateSeconds(timer:))
             //Sends signal to robot to start motion
+            hoopBot?.startGame()
             //Starts listening for and computing score
             activeGame = true;
         }
@@ -66,7 +70,9 @@ class LiveGameViewController: UIViewController {
         seconds -= 1
         //Update seconds label
         timerLabel.text = String(seconds)
+        
         //Simulate the opponent's score
+        //FIXME so that doesn't update the score less than 1 second apart
         if(Bool.random()){
             updateOpponentScore()
         }
@@ -86,8 +92,6 @@ class LiveGameViewController: UIViewController {
     }
     
     func updateOpponentScore(){
-        let random = Int.random(in: 0...10)
-        
         // Randomly updates score of opponent
         if(Bool.random()){
             opponentScore += 1

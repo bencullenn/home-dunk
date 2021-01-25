@@ -27,11 +27,10 @@ class HoopBotManager {
             if hoopBotDevice == nil{
                 for device in self.devices {
                     //FIXME: Update name to be whatever final hoop bot actually ends up being
-                    if device.name == "ESP_Blinky_1800d9" {
+                    if device.name == "Hoop Bot" {
                         self.hoopBotDevice = device
                         print("Set hoop_bot to \(String(describing: hoopBotDevice))")
                         hoopBotDevice?.connect()
-                        
                     }
                 }
             }
@@ -43,6 +42,7 @@ class HoopBotManager {
         manager.delegate = self
     }
     
+    //Setters
     private func updateManagerStatus(){
         managerStatus = "state: \(manager.state), scan: \(manager.scanning)"
     }
@@ -57,6 +57,15 @@ class HoopBotManager {
         hoopBotDevice?.blink = status
     }
     
+    func startGame(){
+        hoopBotDevice?.activeGame = true
+    }
+    
+    func endGame(){
+        hoopBotDevice?.activeGame = false
+    }
+    
+    //Getters
     func getConnectionStatus() -> String {
         return connectionStatus
     }
