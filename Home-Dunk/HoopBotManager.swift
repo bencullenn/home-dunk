@@ -55,6 +55,7 @@ class HoopBotManager {
     
     func startGame(){
         hoopBotDevice?.activeGame = true
+        hoopBotDevice?.score = 0;
     }
     
     func endGame(){
@@ -76,6 +77,10 @@ class HoopBotManager {
     
     func getDeviceDetails() -> String {
         return hoopBotDevice?.description ?? "No device description exists"
+    }
+    
+    func getScore() -> Int {
+        return hoopBotDevice?.score ?? 0
     }
     
 }

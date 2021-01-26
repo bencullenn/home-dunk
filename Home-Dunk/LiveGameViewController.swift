@@ -82,6 +82,7 @@ class LiveGameViewController: UIViewController {
             timer.invalidate()
             //Show score
             displayScore()
+            hoopBot?.endGame()
         }
     }
     

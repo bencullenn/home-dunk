@@ -130,6 +130,7 @@ extension BTDevice: CBPeripheralDelegate {
             } else if $0.uuid == BTUUIDs.score {
                 self.scoreChar = $0
                 peripheral.readValue(for: $0)
+                peripheral.setNotifyValue(true, for: $0)
             } else if $0.uuid == BTUUIDs.infoSerial {
                 peripheral.readValue(for: $0)
             }
