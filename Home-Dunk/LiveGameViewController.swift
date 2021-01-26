@@ -73,7 +73,7 @@ class LiveGameViewController: UIViewController {
         
         //Simulate the opponent's score
         //FIXME so that doesn't update the score less than 1 second apart
-        if(Bool.random()){
+        if(seconds % 3 == 0){
             updateOpponentScore()
         }
         
