@@ -38,30 +38,9 @@ class LiveGameViewController: UIViewController {
     
     @IBAction func startGame(_ sender: Any) {
         if(activeGame == true){
-            //If game is actively running
-            print("Stopping Game...")
-            startButtonLabel.setTitle("Start Game", for: .normal)
-            //Invalidates timer
-            timer.invalidate()
-            //Resets timer label to length
-            timerLabel.text = String(Int(timerLength))
-            
-            //End game on robot
-            hoopBot?.endGame()
-            
-            activeGame = false;
+            endGame()
         } else {
-            //If game is not actively running
-            print("Starting Game...")
-            startButtonLabel.setTitle("End Game", for: .normal)
-            seconds = Int(timerLength)
-            
-            //Starts timer on device
-            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: updateInterface(timer:))
-            //Sends signal to robot to start motion
-            hoopBot?.startGame()
-            //Starts listening for and computing score
-            activeGame = true;
+            startGame()
         }
     }
     
@@ -78,11 +57,9 @@ class LiveGameViewController: UIViewController {
         }
         
         if(seconds <= 0){
-            //Invalidate timer
-            timer.invalidate()
+            endGame()
             //Show score
             displayScore()
-            hoopBot?.endGame()
         }
         
         userScore = hoopBot?.getScore() ?? 0
@@ -103,5 +80,35 @@ class LiveGameViewController: UIViewController {
         }
     }
     
+    func endGame(){
+        //If game is actively running
+        print("Stopping Game...")
+        startButtonLabel.setTitle("Start Game", for: .normal)
+        //Invalidates timer
+        timer.invalidate()
+        //Resets timer label to length
+        timerLabel.text = String(Int(timerLength))
+        //Reset score label
+        userScoreLabel.text = "0"
+        
+        //End game on robot
+        hoopBot?.endGame()
+        
+        activeGame = false;
+    }
+    
+    func startGame(){
+        //If game is not actively running
+        print("Starting Game...")
+        startButtonLabel.setTitle("End Game", for: .normal)
+        seconds = Int(timerLength)
+        
+        //Starts timer on device
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: updateInterface(timer:))
+        //Sends signal to robot to start motion
+        hoopBot?.startGame()
+        //Starts listening for and computing score
+        activeGame = true;
+    }
 
 }
