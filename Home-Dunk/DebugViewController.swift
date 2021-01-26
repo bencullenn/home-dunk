@@ -20,9 +20,6 @@ class DebugViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func updateBlinkStatus(_ sender: Any) {
-        hoopBot?.updateBlink(blinkSwitch.isOn)
-    }
     
     @IBAction func updateInformation(_ sender: Any) {
         print("Checking for more updated information")

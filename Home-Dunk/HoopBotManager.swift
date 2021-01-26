@@ -27,7 +27,7 @@ class HoopBotManager {
             if hoopBotDevice == nil{
                 for device in self.devices {
                     //FIXME: Update name to be whatever final hoop bot actually ends up being
-                    if device.name == "Hoop Bot" {
+                    if device.name == "Hoop_Bot_1800d9" {
                         self.hoopBotDevice = device
                         print("Set hoop_bot to \(String(describing: hoopBotDevice))")
                         hoopBotDevice?.connect()
@@ -51,11 +51,7 @@ class HoopBotManager {
         print("Updating connection status to \(status)")
         connectionStatus = status
     }
-    
-    func updateBlink(_ status:Bool){
-        print("Blink status updated to \(status)")
-        hoopBotDevice?.blink = status
-    }
+
     
     func startGame(){
         hoopBotDevice?.activeGame = true
@@ -108,8 +104,12 @@ extension HoopBotManager: BTDeviceDelegate {
         print("Device serial changed to \(value)")
     }
     
-    func deviceSpeedChanged(value: Int) {
-        print("Device speed changed to \(value)")
+    func deviceActiveGameChanged(value: Bool) {
+        print("Active game changed to \(value)")
+    }
+    
+    func deviceScoreChanged(value: Int) {
+        print("Score changed to \(value)")
     }
     
     func deviceConnected() {
@@ -122,24 +122,5 @@ extension HoopBotManager: BTDeviceDelegate {
     
     func deviceReady() {
         updateConnectionStatus("Ready")
-    }
-    
-    func deviceBlinkChanged(value: Bool) {
-        print("Device blink changed to \(value)")
-        
-        /*
-         Code that could be used to send out notifications from app if needed
-        if UIApplication.shared.applicationState == .background {
-            let content = UNMutableNotificationContent()
-            content.title = "ESP Blinky"
-            content.body = value ? "Now blinking" : "Not blinking anymore"
-            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: nil)
-            UNUserNotificationCenter.current().add(request) { (error) in
-                if let error = error {
-                    print("DeviceVC: failed to deliver notification \(error)")
-                }
-            }
-        }
-        */
     }
 }

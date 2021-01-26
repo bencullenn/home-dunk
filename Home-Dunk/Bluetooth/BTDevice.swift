@@ -13,8 +13,8 @@ import CoreBluetooth
 protocol BTDeviceDelegate: class {
     func deviceConnected()
     func deviceReady()
-    func deviceBlinkChanged(value: Bool)
-    func deviceSpeedChanged(value: Int)
+    func deviceActiveGameChanged(value: Bool)
+    func deviceScoreChanged(value: Int)
     func deviceSerialChanged(value: String)
     func deviceDisconnected()
 
@@ -23,43 +23,12 @@ protocol BTDeviceDelegate: class {
 class BTDevice: NSObject {
     private let peripheral: CBPeripheral
     private let manager: CBCentralManager
-    private var blinkChar: CBCharacteristic?
-    private var speedChar: CBCharacteristic?
     private var activeGameChar: CBCharacteristic?
     private var scoreChar: CBCharacteristic?
-    private var _blink: Bool = false
-    private var _speed: Int = 5
     private var _activeGame: Bool = false
     private var _score: Int = 0
     
     weak var delegate: BTDeviceDelegate?
-    var blink: Bool {
-        get {
-            return _blink
-        }
-        set {
-            guard _blink != newValue else { return }
-            
-            _blink = newValue
-            if let char = blinkChar {
-                peripheral.writeValue(Data(_: [_blink ? 1 : 0]), for: char, type: .withResponse)
-            }
-        }
-    }
-    
-    var speed: Int {
-        get {
-            return _speed
-        }
-        set {
-            guard _speed != newValue else { return }
-            
-            _speed = newValue
-            if let char = speedChar {
-                peripheral.writeValue(Data(_: [UInt8(_speed)]), for: char, type: .withResponse)
-            }
-        }
-    }
     
     var activeGame: Bool {
         get {
@@ -140,7 +109,7 @@ extension BTDevice: CBPeripheralDelegate {
             if $0.uuid == BTUUIDs.infoService {
                 peripheral.discoverCharacteristics([BTUUIDs.infoSerial], for: $0)
             } else if $0.uuid == BTUUIDs.blinkService {
-                peripheral.discoverCharacteristics([BTUUIDs.blinkOn,BTUUIDs.blinkSpeed], for: $0)
+                peripheral.discoverCharacteristics([BTUUIDs.activeGame,BTUUIDs.score], for: $0)
             } else {
                 peripheral.discoverCharacteristics(nil, for: $0)
             }
@@ -154,12 +123,12 @@ extension BTDevice: CBPeripheralDelegate {
         service.characteristics?.forEach {
             print("   \($0)")
             
-            if $0.uuid == BTUUIDs.blinkOn {
-                self.blinkChar = $0
+            if $0.uuid == BTUUIDs.activeGame {
+                self.activeGameChar = $0
                 peripheral.readValue(for: $0)
                 peripheral.setNotifyValue(true, for: $0)
-            } else if $0.uuid == BTUUIDs.blinkSpeed {
-                self.speedChar = $0
+            } else if $0.uuid == BTUUIDs.score {
+                self.scoreChar = $0
                 peripheral.readValue(for: $0)
             } else if $0.uuid == BTUUIDs.infoSerial {
                 peripheral.readValue(for: $0)
@@ -173,13 +142,13 @@ extension BTDevice: CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         print("Device: updated value for \(characteristic)")
         
-        if characteristic.uuid == blinkChar?.uuid, let b = characteristic.value?.parseBool() {
-            _blink = b
-            delegate?.deviceBlinkChanged(value: b)
+        if characteristic.uuid == activeGameChar?.uuid, let b = characteristic.value?.parseBool() {
+            _activeGame = b
+            delegate?.deviceActiveGameChanged(value: b)
         }
-        if characteristic.uuid == speedChar?.uuid, let s = characteristic.value?.parseInt() {
-            _speed = Int(s)
-            delegate?.deviceSpeedChanged(value: _speed)
+        if characteristic.uuid == scoreChar?.uuid, let s = characteristic.value?.parseInt() {
+            _score = Int(s)
+            delegate?.deviceScoreChanged(value: _score)
         }
         if characteristic.uuid == BTUUIDs.infoSerial, let d = characteristic.value {
             serial = String(data: d, encoding: .utf8)
