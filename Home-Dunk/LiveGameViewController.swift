@@ -17,7 +17,7 @@ class LiveGameViewController: UIViewController {
     
     var timer = Timer()
     var activeGame: Bool = false
-    let timerLength: Double = 5
+    let timerLength: Double = 30
     var seconds: Int
     var userScore: Int = 0
     var opponentScore: Int = 0
