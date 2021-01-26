@@ -128,7 +128,7 @@ class LiveGameViewController: UIViewController {
              //let secondActivityItem : NSURL = NSURL(string: "http//:urlyouwant")!
 
              // If you want to put an image
-             let image : UIImage = UIImage(named: "Home_Dunk_Logo.jpg")!
+             //let image : UIImage = UIImage(named: "Home_Dunk_Logo.jpg")!
 
              let activityViewController : UIActivityViewController = UIActivityViewController(
                         activityItems: [firstActivityItem, image], applicationActivities: nil)
