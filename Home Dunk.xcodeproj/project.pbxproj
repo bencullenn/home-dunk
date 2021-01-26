@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CC98D7C25C09A8D009E21CE /* Home_Dunk_Logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CC98D7B25C09A8D009E21CE /* Home_Dunk_Logo.jpg */; };
 		0CE6706E25BCE57000E5FD10 /* GameModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6706D25BCE57000E5FD10 /* GameModeViewController.swift */; };
 		0CE6707325BCE5D700E5FD10 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6707225BCE5D700E5FD10 /* DebugViewController.swift */; };
 		0CE6707825BCEE2D00E5FD10 /* FriendSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE6707725BCEE2D00E5FD10 /* FriendSelectViewController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CC98D7B25C09A8D009E21CE /* Home_Dunk_Logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Home_Dunk_Logo.jpg; sourceTree = "<group>"; };
 		0CE6706D25BCE57000E5FD10 /* GameModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModeViewController.swift; sourceTree = "<group>"; };
 		0CE6707225BCE5D700E5FD10 /* DebugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
 		0CE6707725BCEE2D00E5FD10 /* FriendSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSelectViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				0CE71E3825B8008F002D1F4A /* Assets.xcassets */,
 				0CE71E3A25B8008F002D1F4A /* LaunchScreen.storyboard */,
 				0CE71E3D25B8008F002D1F4A /* Info.plist */,
+				0CC98D7B25C09A8D009E21CE /* Home_Dunk_Logo.jpg */,
 				0CE71E3525B8008E002D1F4A /* Home_Dunk.xcdatamodeld */,
 				0CE71E9925BCDC16002D1F4A /* Bluetooth */,
 				0CE71E4525B8008F002D1F4A /* Home-DunkTests */,
@@ -273,6 +276,7 @@
 				0CE71E3C25B8008F002D1F4A /* LaunchScreen.storyboard in Resources */,
 				0CE71E3925B8008F002D1F4A /* Assets.xcassets in Resources */,
 				0CE71E3425B8008E002D1F4A /* Main.storyboard in Resources */,
+				0CC98D7C25C09A8D009E21CE /* Home_Dunk_Logo.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

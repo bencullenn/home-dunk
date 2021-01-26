@@ -15,7 +15,7 @@ class LBGameViewController: UIViewController {
     
     var timer = Timer()
     var activeGame: Bool = false
-    let timerLength: Double = 30
+    let timerLength: Double = 5
     var seconds: Int
     var currentScore: Int = 0
     
@@ -54,9 +54,38 @@ class LBGameViewController: UIViewController {
     }
     
     func displayScore(){
-        let alert = UIAlertController(title: "Final Score:\(currentScore)", message: "", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
-        present(alert, animated: true)
+        let message = "Tap share to share your score with friends!"
+        let alertController = UIAlertController(title: "Final Score:\(currentScore)", message: message, preferredStyle: .alert)
+
+        let shareAction = UIAlertAction(title: "Share", style: .default, handler: { x -> Void in
+
+            let firstActivityItem = "I just scored \(self.currentScore) on Home Dunk!"
+             //let secondActivityItem : NSURL = NSURL(string: "http//:urlyouwant")!
+
+             // If you want to put an image
+             let image : UIImage = UIImage(named: "Home_Dunk_Logo.jpg")!
+
+             let activityViewController : UIActivityViewController = UIActivityViewController(
+                        activityItems: [firstActivityItem, image], applicationActivities: nil)
+
+             // Anything you want to exclude
+             activityViewController.excludedActivityTypes = [
+                UIActivity.ActivityType.postToWeibo,
+                UIActivity.ActivityType.print,
+                UIActivity.ActivityType.assignToContact,
+                UIActivity.ActivityType.saveToCameraRoll,
+                UIActivity.ActivityType.addToReadingList,
+                UIActivity.ActivityType.postToFlickr,
+                UIActivity.ActivityType.postToVimeo,
+                UIActivity.ActivityType.postToTencentWeibo
+              ]
+
+            self.present(activityViewController, animated: true, completion: nil)
+         })
+
+        alertController.addAction(shareAction)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func endGame(){
