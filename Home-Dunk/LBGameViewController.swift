@@ -47,14 +47,14 @@ class LBGameViewController: UIViewController {
             seconds = Int(timerLength)
             
             //Starts timer on device
-            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: updateSeconds(timer:))
+            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: updateInterface(timer:))
             //Sends signal to robot to start motion
             //Starts listening for and computing score
             activeGame = true;
         }
     }
     
-    func updateSeconds(timer:Timer){
+    func updateInterface(timer:Timer){
         //Decrement seconds
         seconds -= 1
         //Update seconds label
@@ -65,6 +65,9 @@ class LBGameViewController: UIViewController {
             //Show score
             displayScore()
         }
+        
+        currentScore = hoopBot?.getScore() ?? 0
+        currentScoreLabel.text = String(currentScore)
     }
     
     func displayScore(){

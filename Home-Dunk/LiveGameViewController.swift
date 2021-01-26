@@ -57,7 +57,7 @@ class LiveGameViewController: UIViewController {
             seconds = Int(timerLength)
             
             //Starts timer on device
-            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: updateSeconds(timer:))
+            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: updateInterface(timer:))
             //Sends signal to robot to start motion
             hoopBot?.startGame()
             //Starts listening for and computing score
@@ -65,7 +65,7 @@ class LiveGameViewController: UIViewController {
         }
     }
     
-    func updateSeconds(timer:Timer){
+    func updateInterface(timer:Timer){
         //Decrement seconds
         seconds -= 1
         //Update seconds label
@@ -84,6 +84,9 @@ class LiveGameViewController: UIViewController {
             displayScore()
             hoopBot?.endGame()
         }
+        
+        userScore = hoopBot?.getScore() ?? 0
+        userScoreLabel.text = String(userScore)
     }
     
     func displayScore(){

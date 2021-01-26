@@ -201,21 +201,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flash Pin 13 LED:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53k-la-8qc">
-                                <rect key="frame" x="20" y="583" width="130" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="LEDSwitch" translatesAutoresizingMaskIntoConstraints="NO" id="0kk-cr-GnZ">
-                                <rect key="frame" x="222" y="578" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="updateBlinkStatus:" destination="0fz-Ua-ShP" eventType="valueChanged" id="7Hd-um-9VO"/>
-                                    <action selector="updateBlinkStatus:" destination="3PE-gu-f2d" eventType="valueChanged" id="TQ9-Kf-NZi"/>
-                                </connections>
-                            </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Device Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2N-gx-TFt">
                                 <rect key="frame" x="20" y="173" width="149" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -230,16 +215,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGr-Yk-CNa">
-                                <rect key="frame" x="44" y="651" width="326" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Check for updated information"/>
-                                <connections>
-                                    <action selector="updateInformation:" destination="0fz-Ua-ShP" eventType="touchUpInside" id="AYg-I3-7J4"/>
-                                    <action selector="updateInformation:" destination="3PE-gu-f2d" eventType="touchUpInside" id="P9v-zo-orH"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Manager Status:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ug-Hi-ihs">
                                 <rect key="frame" x="20" y="446" width="125" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -254,13 +229,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGr-Yk-CNa">
+                                <rect key="frame" x="44" y="589" width="326" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Check for updated information"/>
+                                <connections>
+                                    <action selector="updateInformation:" destination="0fz-Ua-ShP" eventType="touchUpInside" id="AYg-I3-7J4"/>
+                                    <action selector="updateInformation:" destination="3PE-gu-f2d" eventType="touchUpInside" id="P9v-zo-orH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ufQ-NU-TkL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Debug Information" id="Z3L-KY-m8v"/>
                     <connections>
-                        <outlet property="blinkSwitch" destination="0kk-cr-GnZ" id="puf-gm-LBv"/>
                         <outlet property="connectionLabel" destination="DCb-yU-EBf" id="n37-mK-voK"/>
                         <outlet property="devDescriptionLabel" destination="S1G-sZ-vm4" id="rJC-tQ-VHa"/>
                         <outlet property="devNameLabel" destination="wk2-l3-7p6" id="mbH-AW-NVW"/>
