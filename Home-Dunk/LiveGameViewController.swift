@@ -131,7 +131,7 @@ class LiveGameViewController: UIViewController {
              //let image : UIImage = UIImage(named: "Home_Dunk_Logo.jpg")!
 
              let activityViewController : UIActivityViewController = UIActivityViewController(
-                        activityItems: [firstActivityItem, image], applicationActivities: nil)
+                        activityItems: [firstActivityItem], applicationActivities: nil)
 
              // Anything you want to exclude
              activityViewController.excludedActivityTypes = [
